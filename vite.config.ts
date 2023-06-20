@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import { version as pkgVersion } from './package.json'
+import Layouts from 'vite-plugin-vue-layouts';
 
 process.env.VITE_APP_VERSION = pkgVersion
 if (process.env.NODE_ENV === 'production') {
@@ -26,6 +27,10 @@ export default defineConfig({
       eslintrc: {
         enabled: true,
       },
+    }),
+    Layouts({
+      layoutsDirs: ['src/layouts'],
+      defaultLayout: 'default'
     }),
   ],
   resolve: {
