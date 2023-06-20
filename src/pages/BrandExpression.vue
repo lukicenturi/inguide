@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { useMainStore } from '@/store';
-import { LogoOptions } from '@/data/logo';
 import { BrandExpressionOptions } from '@/data/brand-expression';
 
 const { selectedBrandExpression } = storeToRefs(useMainStore());
 </script>
 <template>
-  <div class="grid grid-cols-3 h-full w-[1500px]">
+  <div class="grid grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 h-full max-w-[1200px]">
     <div
       v-for="item in BrandExpressionOptions"
       :key="item.id"

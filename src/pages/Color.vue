@@ -5,7 +5,7 @@ import { ColorOptions } from '@/data/colors';
 const { selectedColor } = storeToRefs(useMainStore());
 </script>
 <template>
-  <div class="grid grid-cols-6 h-full w-[1200px]">
+  <div class="grid grid-cols-3 lg:grid-cols-6 h-full w-full max-w-[1200px]">
     <div
       v-for="item in ColorOptions"
       :key="item"

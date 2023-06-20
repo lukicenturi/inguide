@@ -4,14 +4,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,ts}'],
-  // theme: {
-  //   extend: {
-  //     // here's how to extend fonts if needed
-  //     fontFamily: {
-  //       sans: [...defaultTheme.fontFamily.sans],
-  //     },
-  //   },
-  // },
+  theme: {
+    extend: {
+      keyframes: {
+        loading: {
+          from: { transform: 'translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(0deg)' },
+          to: { transform: ' translate(var(--tw-translate-x), var(--tw-translate-y))rotate(360deg)' },
+        },
+        width: {
+          from: { width: 0 },
+          to: { width: '100%' }
+        }
+      },
+      colors: {
+        'yellow': '#faff00'
+      }
+    }
+  },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),

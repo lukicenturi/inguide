@@ -6,7 +6,7 @@ import { PhotographyOptions } from '@/data/photography';
 const { selectedPhotography } = storeToRefs(useMainStore());
 </script>
 <template>
-  <div class="grid grid-cols-2 h-full w-[900px]">
+  <div class="grid lg:grid-cols-2 h-full max-w-[1200px]">
     <div
       v-for="item in PhotographyOptions"
       :key="item.id"

@@ -13,11 +13,29 @@ import Icon from '@/pages/Icon.vue';
 import Illustration from '@/pages/Illustration.vue';
 import Photography from '@/pages/Photography.vue';
 import DataVisualization from '@/pages/DataVisualization.vue';
+import FinalComposition from '@/pages/FinalComposition.vue';
+import Login from '@/pages/Login.vue';
+import Tools from '@/pages/Tools.vue';
+import Text from '@/pages/Text.vue';
 
 const routes = setupLayouts([
   {
     path: Routes.INDEX_ROUTE,
-    redirect: Routes.TONE_OF_VOICE_ROUTE,
+    redirect: Routes.ACCOUNT_ROUTE,
+  },
+  {
+    path: Routes.ACCOUNT_ROUTE,
+    component: Login,
+    meta: {
+      layout: 'account'
+    }
+  },
+  {
+    path: Routes.TOOLS_ROUTE,
+    component: Tools,
+    meta: {
+      layout: 'tools'
+    }
   },
   {
     path: Routes.TONE_OF_VOICE_ROUTE,
@@ -34,6 +52,10 @@ const routes = setupLayouts([
   {
     path: Routes.TYPOGRAPHY_ROUTE,
     component: Typography
+  },
+  {
+    path: Routes.TEXT_ROUTE,
+    component: Text
   },
   {
     path: Routes.BRAND_EXPRESSION_ROUTE,
@@ -62,6 +84,10 @@ const routes = setupLayouts([
   {
     path: Routes.DATA_VISUALIZATION_ROUTE,
     component: DataVisualization
+  },
+  {
+    path: Routes.FINAL_COMPOSITION_ROUTE,
+    component: FinalComposition
   }
 ])
 
